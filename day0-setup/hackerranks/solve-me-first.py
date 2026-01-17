@@ -1,4 +1,7 @@
 def solveMeFirst(a, b):
     return a + b
 
-print(solveMeFirst(2, 3))
+if __name__ == "__main__":
+    a = int(input().strip())
+    b = int(input().strip())
+    print(solveMeFirst(a, b))
