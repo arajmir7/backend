@@ -1,4 +1,4 @@
-# Day 4 – Libraries, Arrays & Real-World Python Project
+# Day 3 – Libraries, Arrays & Real-World Python Project
 
 ## Focus of the Day
 
@@ -8,26 +8,26 @@ Completed Unit 2 (Libraries & Frameworks) with hands-on problem solving and a re
 
 ## Concepts Learned & Applied
 
-### 1. Array Manipulation (CO2)
+### 1. Array Manipulation
 
 * Simulated NumPy-like array behavior using Python lists
 * Practiced carry handling, matrix-style generation, and space optimization
 * Understood reverse traversal and in-place updates
 
-### 2. Algorithmic Optimization (CO2)
+### 2. Algorithmic Optimization
 
 * Learned to detect invalid states early (New Year Chaos)
 * Used constrained scanning to avoid TLE
 * Applied greedy logic for minimum swaps
 
-### 3. File Handling & CSV Processing (CO2)
+### 3. File Handling & CSV Processing 
 
 * Read CSV files using Python’s built-in `csv` module
 * Parsed structured data without pandas
 * Learned difference between script location vs working directory
 * Implemented path-safe file access using `os.path`
 
-### 4. Math & Statistics (CO2)
+### 4. Math & Statistics
 
 * Calculated:
 
@@ -37,7 +37,7 @@ Completed Unit 2 (Libraries & Frameworks) with hands-on problem solving and a re
 * Used `math` module for variance and square root
 * Applied statistical logic to real student data
 
-### 5. Data Visualization without Libraries (CO6)
+### 5. Data Visualization without Libraries
 
 * Simulated matplotlib-style bar charts using ASCII
 * Generated readable reports using text-based visualization
