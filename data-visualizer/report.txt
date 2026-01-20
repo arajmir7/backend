@@ -1,0 +1,14 @@
+CLASS PERFORMANCE REPORT
+==============================
+
+Mean Marks   : 86.60
+Median Marks : 88.00
+Std Deviation: 4.88
+
+MARKS DISTRIBUTION (ASCII BAR CHART)
+------------------------------
+ 78 | █
+ 85 | █
+ 88 | █
+ 90 | █
+ 92 | █

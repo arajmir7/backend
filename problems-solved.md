@@ -82,3 +82,80 @@ Project:
   * Hashmaps
   * XOR
   * Two pointers
+
+
+
+
+## Day 4
+
+## LeetCode (CO2)
+
+1. **66. Plus One**
+
+   * Status: ✅ Accepted
+   * Concept: Array carry handling
+   * Time Complexity: O(n)
+   * Space Complexity: O(1)
+
+2. **118. Pascal’s Triangle**
+
+   * Status: ✅ Accepted
+   * Concept: Matrix generation using previous rows
+   * Application: Probability & combinatorics
+
+3. **119. Pascal’s Triangle II**
+
+   * Status: ✅ Accepted
+   * Concept: Space-optimized dynamic programming
+   * Extra Space: O(rowIndex)
+
+---
+
+## HackerRank (CO2)
+
+1. **Arrays – Left Rotation**
+
+   * Status: ✅ 10/10
+   * Concept: Array slicing and modulo rotation
+
+2. **New Year Chaos**
+
+   * Status: ✅ 10/10
+   * Concept: Bribe detection, optimized inversion counting
+
+3. **Minimum Swaps 2**
+
+   * Status: ✅ 10/10
+   * Concept: Greedy swapping, cycle detection
+   * Time Complexity: O(n)
+
+---
+
+## Project Work (CO2 + CO6)
+
+### **Project: Data Visualizer**
+
+* Status: ✅ Completed
+* Features:
+
+  * CSV reading using built-in `csv`
+  * Mean, median, standard deviation
+  * ASCII bar chart visualization
+  * UTF-8 safe report generation
+* Output:
+
+  * `report.txt` generated successfully
+* Libraries Used:
+
+  * `csv`, `math`, `os` (standard library only)
+
+---
+
+## Summary
+
+* LeetCode Problems: 3
+* HackerRank Problems: 3
+* Projects Completed: 1
+* Unit 2 Status: ✅ Completed
+
+---
