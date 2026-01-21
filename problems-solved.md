@@ -159,3 +159,22 @@ Project:
 * Unit 2 Status: ✅ Completed
 
 ---
+
+
+## Day 4 – Problems Solved
+
+### LeetCode
+- Plus One – handled carry logic in arrays
+- Pascal’s Triangle – built row by row using lists
+- Pascal’s Triangle II – optimized space usage
+
+### HackerRank
+- Arrays Left Rotation – list slicing and indexing
+- New Year Chaos – counted minimum swaps efficiently
+- Minimum Swaps 2 – solved using index mapping
+
+### What I Practiced
+- List operations
+- Logical thinking
+- Time optimization
+- Clean Python coding
