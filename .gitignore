@@ -1,0 +1,13 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Environments
+venv/
+.env/
+
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
