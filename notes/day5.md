@@ -1,22 +1,39 @@
-# Day 5 – OOP + File Handling in Python
+# 📘 Day 5 – OOP + File Handling (Python)
 
-## What I Worked On Today
-Today was about writing **clean, structured Python code** using classes and saving data so it doesn’t disappear when the program stops.
+## What Today Was About
+Day 5 was a turning point. Until now, most programs ran once and forgot everything.  
+Today was about building **real programs** — programs that:
 
-Basically:
-- Stop writing random scripts
-- Start writing **real programs**
+- Have structure  
+- Use classes properly  
+- Save data  
+- Don’t break when restarted  
+
+This felt like actual backend development, not just practice.
 
 ---
 
-## 🧱 Object-Oriented Programming (OOP)
+## 🧠 Object-Oriented Programming (OOP)
 
-### Classes & Objects
-A class is like a template, and an object is the real thing created from it.
+### What is OOP?
+OOP is a way to organize code so it behaves like real-world things.
 
-Example:
+Instead of writing long scripts with random variables, we use:
+- Classes
+- Objects
+- Methods
+
+This makes code cleaner, reusable, and scalable.
+
+---
+
+### Classes and Objects
+A class is a blueprint.  
+An object is the real thing created from that blueprint.
+
 ```python
 class Student:
-    def __init__(self, name, roll):
+    def __init__(self, id, name, course):
+        self.id = id
         self.name = name
-        self.roll = roll
+        self.course = course
