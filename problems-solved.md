@@ -178,3 +178,64 @@ Project:
 - Logical thinking
 - Time optimization
 - Clean Python coding
+
+
+
+---
+
+
+## Day 5 – Problems Solved
+
+### LeetCode
+
+1. **First Unique Character**
+   - Used character counting
+   - Practiced clean string traversal
+
+2. **Find the Difference**
+   - Compared two strings logically
+   - Simple but important problem
+
+3. **Is Subsequence**
+   - Two-pointer approach
+   - Real-world string filtering logic
+
+4. **Count Good Nodes in Binary Tree**
+   - Tree traversal
+   - Strengthened recursion understanding
+
+5. **LRU Cache**
+   - More advanced problem
+   - Focused on design and efficiency
+   - Interview-level logic
+
+---
+
+### HackerRank
+
+1. **Capitalize**
+   - String formatting
+   - Clean input handling
+
+2. **The Minion Game**
+   - Optimized string processing
+   - Time complexity awareness
+
+3. **Merge the Tools**
+   - Chunk-based string logic
+   - Sets + loops combined cleanly
+
+---
+
+### Project Work
+- Built a small system using classes
+- Data saved using JSON files
+- Added create, update, delete features
+- Handled errors to avoid crashes
+
+---
+
+### Summary
+- Stronger grip on OOP
+- Learned how data persistence actually works
+- Code is cleaner and more structured than earlier days
