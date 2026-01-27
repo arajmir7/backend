@@ -11,3 +11,5 @@ venv/
 
 # OS junk
 .DS_Store
+
+*.exe
