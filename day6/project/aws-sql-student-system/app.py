@@ -1,22 +1,27 @@
 from flask import Flask, request, jsonify
 from db import get_connection
-
-from flask import Flask, request, jsonify
 from notifier import mail, send_enrollment_email
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
 app = Flask(__name__)
 
-# Automation Config
+# =====================
+# Mail Configuration
+# =====================
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME') # Add this to your .env!
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD') # Your App Password
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 
 mail.init_app(app)
+
+# =====================
+# Routes
+# =====================
 
 @app.route("/")
 def home():
@@ -25,33 +30,41 @@ def home():
 @app.route("/students", methods=["GET"])
 def get_students():
     conn = get_connection()
-    cur = conn.cursor()
-    cur.execute("SELECT id, name, course, email FROM students;")
+    cur = conn.cursor(dictionary=True)
+    cur.execute("SELECT id, name, course, email FROM students")
     rows = cur.fetchall()
     cur.close()
     conn.close()
+    return jsonify(rows), 200
 
-    students = [
-        {"id": r[0], "name": r[1], "course": r[2], "email": r[3]}
-        for r in rows
-    ]
-    return jsonify(students)
-
-@app.route("/students", methods=["POST"])
 @app.route("/students", methods=["POST"])
 def add_student():
-    data = request.json
+    data = request.get_json()
+
+    if not data:
+        return {"error": "Invalid JSON body"}, 400
+
+    name = data.get("name")
+    course = data.get("course")
+    email = data.get("email")
+
+    if not name or not email:
+        return {"error": "Name and email are required"}, 400
+
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute(
-        "INSERT INTO students (name, course, email) VALUES (%s, %s, %s)",
-        (data["name"], data["course"], data["email"])
-    )
-    conn.commit()
-    cur.close()
-    conn.close()
 
-    send_enrollment_email(app, data["email"], data["name"])
+    try:
+        cur.execute(
+            "INSERT INTO students (name, course, email) VALUES (%s, %s, %s)",
+            (name, course, email)
+        )
+        conn.commit()
+    finally:
+        cur.close()
+        conn.close()
+
+    send_enrollment_email(app, email, name)
 
     return {"message": "Student added and notification sent!"}, 201
 
@@ -59,11 +72,17 @@ def add_student():
 def delete_student(id):
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute("DELETE FROM students WHERE id = %s", (id,))
-    conn.commit()
-    cur.close()
-    conn.close()
+    try:
+        cur.execute("DELETE FROM students WHERE id = %s", (id,))
+        conn.commit()
+    finally:
+        cur.close()
+        conn.close()
+
     return {"message": "Student deleted"}, 200
 
+# =====================
+# App Runner
+# =====================
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
